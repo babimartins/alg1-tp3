@@ -1,3 +1,4 @@
 #include <iostream>
+#include <vector>
 
-void test();
+int orderFabrics(std::vector<int> fabrics);
