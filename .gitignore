@@ -1,4 +1,6 @@
 *.txt
+*cmake-build-debug
+*.idea
 
 # Prerequisites
 *.d
@@ -32,3 +34,4 @@
 *.exe
 *.out
 *.app
+*.bin
