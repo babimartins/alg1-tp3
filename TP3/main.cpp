@@ -1,19 +1,20 @@
 #include <iostream>
-#include <map>
-#include <string>
-#include <vector>
 #include "loja.hpp"
 
 int main() {
-  
-  //make a vector of ints
-  std::vector<int> v;
+    int num, rolls;
+    std::cin >> num;
 
-  //make a map of strings to ints
-  std::map<std::string, int> m;
+    while (num > 0) {
+        std::cin >> rolls;
+        std::vector<int> fabrics(rolls);
+        for (int i = 0; i < rolls; ++i) {
+            std::cin >> fabrics[i];
+        }
+        std::cout << orderFabrics(fabrics) << std::endl;
 
-  // call a function in another file
-  test();
+        num--;
+    }
 
-  return(0);
+    return(0);
 }
