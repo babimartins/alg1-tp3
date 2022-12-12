@@ -19,7 +19,9 @@ int orderFabrics(std::vector<int> fabrics) {
     }
 
     for (int i = 0; i < fabrics.size(); ++i) {
-        result = std::max(result, lis[i] + lds[i] - 1);
+        if (lis[i] + lds[i] - 1 > result) {
+            result = lis[i] + lds[i] - 1;
+        }
     }
 
     return result;
