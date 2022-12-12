@@ -10,10 +10,10 @@ int orderFabrics(std::vector<int> fabrics) {
 
     for (int i = 1; i < fabrics.size(); ++i) {
         for (int j = 0; j < i; ++j) {
-            if (fabrics[j] < fabrics[i]) {
-                lis[i] = std::max(lis[i], lis[j] + 1);
-            } else if (fabrics[j] > fabrics[i]) {
-                lds[i] = std::max(lds[i], lds[j] + 1);
+            if (fabrics[j] < fabrics[i] && lis[j] + 1 > lis[i]) {
+                lis[i] = lis[j] + 1;
+            } else if (fabrics[j] > fabrics[i] && lds[j] + 1 > lds[i]) {
+                lds[i] = lds[j] + 1;
             }
         }
     }
